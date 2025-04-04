@@ -1,0 +1,19 @@
+name: "AI Code Review Comment Action"
+description: "Discusses on MR threads using OpenAI API."
+inputs:
+  BOT_TOKEN:
+    description: "GitHub token to interact with the repository."
+    required: true
+  OPENAI_API_KEY:
+    description: "OpenAI API key for GPT."
+    required: true
+  OPENAI_API_MODEL:
+    description: "OpenAI API model."
+    required: false
+    default: "gpt-4o-mini-2024-07-18"
+runs:
+  using: "node16"
+  main: "dist/index.js"
+branding:
+  icon: "aperture"
+  color: "green"
